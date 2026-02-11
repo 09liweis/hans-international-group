@@ -1,4 +1,6 @@
 ---
+import StructuredData from './StructuredData.astro';
+
 interface Props {
   title?: string;
 }
@@ -18,6 +20,9 @@ const { title = "Hans International Group" } = Astro.props;
       content="Hans International Group - Leading the Steel Industry with Excellence"
     />
     <title>{title}</title>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <StructuredData />
   </head>
   <body>
     <slot />
