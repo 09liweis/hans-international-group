@@ -1,11 +1,12 @@
 ---
 import StructuredData from './StructuredData.astro';
+import { COMPANY_NAME, COMPANY_TAGLINE } from '../constants';
 
 interface Props {
   title?: string;
 }
 
-const { title = "Hans International Group" } = Astro.props;
+const { title = COMPANY_NAME } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,7 +18,7 @@ const { title = "Hans International Group" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="Hans International Group - Leading the Steel Industry with Excellence"
+      content={`${COMPANY_NAME} - ${COMPANY_TAGLINE}`}
     />
     <title>{title}</title>
     
@@ -29,7 +30,7 @@ const { title = "Hans International Group" } = Astro.props;
     <footer class="bg-red-900 text-white py-8 px-4">
       <div class="max-w-6xl mx-auto text-center">
         <p class="text-red-200">
-          &copy; {new Date().getFullYear()} Hans International Group. All rights
+          &copy; {new Date().getFullYear()} {COMPANY_NAME}. All rights
           reserved.
         </p>
       </div>

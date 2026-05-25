@@ -1,33 +1,35 @@
 ---
-// Structured Data for Hans International Group
+import { COMPANY_NAME, COMPANY_DESCRIPTION, COMPANY_URL, COMPANY_LOGO_URL, COMPANY_ADDRESS, COMPANY_COORDINATES } from '../constants';
+
+// Structured Data
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     // Organization Schema
     {
       "@type": "Organization",
-      "@id": "https://www.hansig.ca/",
-      "name": "Hans International Group",
-      "url": "https://www.hansig.ca/",
+      "@id": COMPANY_URL,
+      "name": COMPANY_NAME,
+      "url": COMPANY_URL,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.hansig.ca/favicon.png",
+        "url": COMPANY_LOGO_URL,
         "width": 600,
         "height": 60
       },
-      "description": "Leading the Steel Industry with Excellence. Hans International Group provides high-quality steel products and services worldwide.",
+      "description": COMPANY_DESCRIPTION,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "6 Sangster Road",
-        "addressLocality": "Uxbridge",
-        "addressRegion": "ON",
-        "postalCode": "L9P 0G5",
-        "addressCountry": "CA"
+        "streetAddress": COMPANY_ADDRESS.street,
+        "addressLocality": COMPANY_ADDRESS.city,
+        "addressRegion": COMPANY_ADDRESS.province,
+        "postalCode": COMPANY_ADDRESS.postal,
+        "addressCountry": COMPANY_ADDRESS.country
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "43.9066458",
-        "longitude": "-79.6407358"
+        "latitude": COMPANY_COORDINATES.latitude,
+        "longitude": COMPANY_COORDINATES.longitude
       },
       "contactPoint": {
         "@type": "ContactPoint",

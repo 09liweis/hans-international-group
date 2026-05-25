@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { COMPANY_NAME, COMPANY_TAGLINE } from "../constants";
 ---
 
-<Layout title="Hans International Group - Steel Industry Leader">
+<Layout title={`${COMPANY_NAME} - Steel Industry Leader`}>
   <main class="min-h-screen">
     <!-- Hero Section -->
     <section
@@ -10,14 +11,14 @@ import Layout from "../layouts/Layout.astro";
     >
       <div class="max-w-6xl mx-auto text-center">
         <h1 class="text-5xl md:text-6xl font-bold mb-6">
-          Hans International Group
+          {COMPANY_NAME}
         </h1>
         <p class="text-xl md:text-2xl text-red-100 mb-4">
-          Leading the Steel Industry with Excellence
+          {COMPANY_TAGLINE}
         </p>
         <p class="text-lg text-red-200 max-w-3xl mx-auto">
           With decades of expertise in steel manufacturing and distribution,
-          Hans International Group stands as a trusted partner in delivering
+          {COMPANY_NAME} stands as a trusted partner in delivering
           high-quality steel products worldwide. Our commitment to innovation,
           sustainability, and customer satisfaction drives us to exceed industry
           standards.
@@ -71,7 +72,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="mt-6 text-center text-gray-700">
           <p class="text-lg font-semibold">
-            Hans International Group Headquarters
+            {COMPANY_NAME} Headquarters
           </p>
           <p class="text-gray-600">6 Sangster Road, Uxbridge, ON, L9P 0G5</p>
         </div>
